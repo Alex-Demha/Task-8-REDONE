@@ -155,14 +155,14 @@ html {
   right: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#502899), to(#e07b29));
-  background: linear-gradient(to bottom, #502899, #e07b29);
+  background: -webkit-gradient(linear, left top, right bottom, from(#502899), to(#e07b29));
+  background: linear-gradient(to bottom right, #502899, #e07b29);
 }
 
 .clip2 {
   -webkit-clip-path: ellipse(100% 45% at 0% 100%);
           clip-path: ellipse(100% 45% at 0% 100%);
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 80px;
@@ -180,7 +180,6 @@ h3 {
 }
 
 .content {
-  border: 2px solid yellow;
   width: 50%;
   max-width: 500px;
   position: absolute;
@@ -195,10 +194,11 @@ h3 {
 }
 
 .content .slide {
-  border: 2px solid blue;
   text-align: center;
   display: none;
   font-size: 1.4rem;
+  color: #222;
+  mix-blend-mode: color-burn;
 }
 
 .content .slide .title {
@@ -221,7 +221,6 @@ h3 {
           align-items: center;
   font-size: 4rem;
   width: 100px;
-  border: 2px solid red;
 }
 
 .content .markerBox .marker {
