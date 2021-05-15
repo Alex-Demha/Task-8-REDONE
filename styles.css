@@ -44,11 +44,11 @@ nav button .bottomLine {
 }
 
 nav ul {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(-110%);
+          transform: translateX(-110%);
   -webkit-transform-origin: left;
           transform-origin: left;
-  background: #333;
+  background: #180429;
   width: 200%;
   height: 99vh;
   list-style: none;
@@ -68,15 +68,15 @@ nav ul li a {
   padding: 20px 12%;
   display: block;
   font-size: 2rem;
-  color: #6200ff;
+  color: #eee;
   text-decoration: none;
 }
 
 .reveal ul {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
-  -webkit-box-shadow: 0px 2px 8px #333;
-          box-shadow: 0px 2px 8px #333;
+  -webkit-box-shadow: 0px 2px 8px #180429;
+          box-shadow: 0px 2px 8px #180429;
 }
 
 .reveal .close .topLine {

@@ -41,6 +41,6 @@ $(".arrow").on('click', function(){
 var $btn = $(".navButton");
 $btn.on("click", function(){
     $("nav").toggleClass("reveal");
-    $("button").toggleClass("close");
+    $(".navButton").toggleClass("close");
     $("nav").toggleClass("overlay")
 });
