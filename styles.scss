@@ -1,46 +1,146 @@
 $secondaryColor1: #502899;
 $secondaryColor2: #e07b29;
 $mainColor: #850718;
+$navList: #333;
+$nav: red;
+
+@import 'navbar';
 
 html{
     font-size: 62.5%;
     font-family: Arial, Helvetica, sans-serif;
 }
 .clip{
-    clip-path: circle(68.8% at 50% 100%);
+    clip-path: ellipse(100% 45% at 0% 100%);
     position: fixed;
-    bottom: -40px;
+    bottom: 0;
     right:0;
     width: 100%;
-    height: 60%;
-    transform: rotate(35deg) scale(150%);
+    height: 100%;
     background: linear-gradient(to bottom, #502899, #e07b29);
 }
 
 .clip2{
-    display: none;
-    clip-path: circle(68.8% at 100% 50%);
+    clip-path: ellipse(100% 45% at 0% 100%);
     position: absolute;
-    top:0;
-    right:0;
-    width: 450px;
-    height: 100%;
+    bottom:0;
+    left:0;
+    width: 80px;
+    height: 120px;
     background: white;
 }
 
 h3{
     color: $mainColor;
-    font-size: 4rem;
+    font-size: 3rem;
+    position: fixed;
+    top: 16px;
+    right: 14px;
+    margin:0;
 }
 
 .content{
-    border: 2px solid red;
 
-    .text1, .text2, .text3{
-        display: none;
+    border: 2px solid yellow;
+    width: 50%;
+    max-width: 500px;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    padding: 22px  40px;
+    height: 250px;
+
+    ul{
+        padding:0;
     }
 
+    .slide{
+        border: 2px solid blue;
+        text-align: center;
+        display: none;
+        font-size: 1.4rem;
+        
+        .title{
+            font-size: 2rem;
+
+        }
+    }
+    .markerBox{
+        position: absolute;
+        left: 50%;
+        margin-left: -50px;
+        bottom: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 4rem;
+        width: 100px;
+        border: 2px solid red;
+
+        .marker{
+            
+            color: gray;
+        }
+
+        .markActive{
+            transform: scale(1.3) translateY(-4px);
+            color: black;
+        }
+    }
+    .arrow{
+        position: absolute;
+        background: transparent;
+        outline: none;
+        border: none;
+        color: $mainColor;
+        font-size: 2.4rem;
+    }
+
+    .next{
+        top:100px;
+        right: 0;
+    }
+
+    .prev{
+        top: 100px;
+        left:0;
+    }
+    
+
     .active{
-        display: block;
+        display: block;   
+    }
+
+    .showNext{
+
+        animation: showNext .5s forwards;
+    }
+
+    .showPrev{
+        animation: showPrev .5s forwards; 
+    }
+}
+
+@keyframes showNext {
+    0%{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100%{
+        opacity: 100;
+        transform: translateX(0);
+    }
+}
+
+@keyframes showPrev{
+    0%{
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 100;
     }
 }

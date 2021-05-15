@@ -1,0 +1,138 @@
+
+nav{
+    transition: z-index .5s;
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 55%;
+    button{
+        position: absolute;
+        top: 6px;
+        left: 10px;
+        z-index: 1000;
+        width: 50px;
+        height: 50px;
+        background: transparent;
+        border: none;
+        outline: none;
+        
+        .topLine, .middleLine, .bottomLine{
+            position: relative;
+            display: block;
+            background: $nav;
+            mix-blend-mode: hue;
+            width: 40px;
+            height: 5px;
+            border-radius: 12px;
+            transition: all cubic-bezier(.2, .2, .3, 1.6) .4s .05s;
+        }
+
+        .topLine{
+            bottom : 8px;
+        }
+
+        .bottomLine{
+            bottom: -8px;
+        }
+    }
+    ul{
+        transform: translateX(-100%);
+        transform-origin: left;
+        background: $navList;
+        width: 200%;
+        height: 99vh;
+        list-style: none;
+        margin-top: 0;
+        padding: 0;
+        padding-top: 100px;
+        transition: all ease .4s;
+        li{
+            margin-left: 0;
+            position: relative;
+            a{
+                padding: 20px 12%;
+                display: block;
+                font-size: 2rem;
+                color: $nav;
+                text-decoration: none;
+            }
+            
+            
+        }
+    }
+}
+
+.reveal{
+
+    ul{
+        transform: translateX(0px);
+        box-shadow: 0px 2px 8px $navList;
+    }
+
+    .close{
+        .topLine{
+            transform: rotate(45deg);
+            bottom: -5px;
+        }
+
+        .bottomLine{
+            transform: rotate(-45deg);
+            bottom: 5px;
+        }
+
+        .middleLine{
+            opacity: 0;
+        }
+    }
+}
+
+.overlay{
+    z-index: 100;
+}
+
+
+@media (min-width: 1024px){
+    nav{
+        button{
+            display: none;
+        }
+
+        ul{
+            transform: translateX(0px);
+            background: transparent;
+            border: none;
+            width: 300px;
+
+           li{
+                margin: 8px;
+                width: 120px;
+
+                &:hover{
+                    background: transparent;
+                }
+
+               a{
+                padding: 10px;
+                width: fit-content;
+                background: none ;
+                &::after{
+                        content: '';
+                        display: block;
+                        height: 4px;
+                        width: 100%;
+                        border-radius: 10px;
+                        background: $nav;
+                        transform: scaleX(0);
+                        transition: all .3s ease;
+                    }
+                
+                &:hover::after{
+                    transform: scaleX(1);
+                }
+               }
+           }
+        }
+    }
+}
