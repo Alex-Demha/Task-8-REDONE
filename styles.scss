@@ -1,8 +1,8 @@
 $secondaryColor1: #5a12df;
 $secondaryColor2: #f58c29;
-$mainColor: #850718;
+$mainColor: #6200ff;
 $navList: #333;
-$nav: #850718;
+$nav: #6200ff;
 
 @import 'navbar';
 
@@ -26,11 +26,12 @@ html{
 }
 
 .clip2{
+    display: none;
     clip-path: ellipse(100% 100% at 0% 100%);
     position: fixed;
     bottom:0;
     left:0;
-    width: 130px;
+    width: 60px;
     height: 60px;
     background: white;
 }
@@ -96,7 +97,7 @@ h3{
         background: transparent;
         outline: none;
         border: none;
-        color: $mainColor;
+        color: $secondaryColor2;
         font-size: 2.4rem;
     }
 

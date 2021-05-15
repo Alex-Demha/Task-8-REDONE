@@ -26,7 +26,7 @@ nav button {
 nav button .topLine, nav button .middleLine, nav button .bottomLine {
   position: relative;
   display: block;
-  background: #850718;
+  background: #6200ff;
   mix-blend-mode: hue;
   width: 40px;
   height: 5px;
@@ -68,7 +68,7 @@ nav ul li a {
   padding: 20px 12%;
   display: block;
   font-size: 2rem;
-  color: #850718;
+  color: #6200ff;
   text-decoration: none;
 }
 
@@ -130,7 +130,7 @@ nav ul li a {
     height: 4px;
     width: 100%;
     border-radius: 10px;
-    background: #850718;
+    background: #6200ff;
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
     -webkit-transition: all .3s ease;
@@ -166,18 +166,19 @@ html {
 }
 
 .clip2 {
+  display: none;
   -webkit-clip-path: ellipse(100% 100% at 0% 100%);
           clip-path: ellipse(100% 100% at 0% 100%);
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 130px;
+  width: 60px;
   height: 60px;
   background: white;
 }
 
 h3 {
-  color: #850718;
+  color: #6200ff;
   font-size: 3rem;
   position: fixed;
   top: 16px;
@@ -245,7 +246,7 @@ h3 {
   background: transparent;
   outline: none;
   border: none;
-  color: #850718;
+  color: #f58c29;
   font-size: 2.4rem;
 }
 
