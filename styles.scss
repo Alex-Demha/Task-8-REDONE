@@ -1,8 +1,8 @@
-$secondaryColor1: #502899;
-$secondaryColor2: #e07b29;
+$secondaryColor1: #5a12df;
+$secondaryColor2: #f58c29;
 $mainColor: #850718;
 $navList: #333;
-$nav: red;
+$nav: #850718;
 
 @import 'navbar';
 
@@ -15,23 +15,23 @@ html{
     overflow: hidden;
 }
 .clip{
-    clip-path: ellipse(100% 45% at 0% 100%);
+    clip-path: ellipse(100% 74% at 16% 100%);
     transform: translateZ(1);
     position: fixed;
     bottom: 0;
     right:0;
     width: 100%;
-    height: 100%;
+    height: 65%;
     background: linear-gradient(to bottom right, $secondaryColor1, $secondaryColor2);
 }
 
 .clip2{
-    clip-path: ellipse(100% 45% at 0% 100%);
+    clip-path: ellipse(100% 100% at 0% 100%);
     position: fixed;
     bottom:0;
     left:0;
-    width: 80px;
-    height: 120px;
+    width: 130px;
+    height: 60px;
     background: white;
 }
 
