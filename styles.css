@@ -147,9 +147,15 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.wrapper {
+  overflow: hidden;
+}
+
 .clip {
   -webkit-clip-path: ellipse(100% 45% at 0% 100%);
           clip-path: ellipse(100% 45% at 0% 100%);
+  -webkit-transform: translateZ(1);
+          transform: translateZ(1);
   position: fixed;
   bottom: 0;
   right: 0;
@@ -199,6 +205,7 @@ h3 {
   font-size: 1.4rem;
   color: #222;
   mix-blend-mode: color-burn;
+  position: relative;
 }
 
 .content .slide .title {
@@ -209,7 +216,7 @@ h3 {
   position: absolute;
   left: 50%;
   margin-left: -50px;
-  bottom: 20px;
+  top: 65%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
