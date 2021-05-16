@@ -38,6 +38,11 @@ $(".arrow").on('click', function(){
     }
 });
 
+setInterval(function(){
+    $('.next').click();}
+    , 7000);
+
+
 var $btn = $(".navButton");
 $btn.on("click", function(){
     $("nav").toggleClass("reveal");

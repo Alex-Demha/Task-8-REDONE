@@ -154,8 +154,6 @@ html {
 .clip {
   -webkit-clip-path: ellipse(100% 74% at 16% 100%);
           clip-path: ellipse(100% 74% at 16% 100%);
-  -webkit-transform: translateZ(1);
-          transform: translateZ(1);
   position: fixed;
   bottom: 0;
   right: 0;
@@ -166,19 +164,21 @@ html {
 }
 
 .clip2 {
-  display: none;
-  -webkit-clip-path: ellipse(100% 100% at 0% 100%);
-          clip-path: ellipse(100% 100% at 0% 100%);
+  -webkit-clip-path: ellipse(33% 24% at 11% 100%);
+          clip-path: ellipse(33% 24% at 11% 100%);
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 60px;
-  height: 60px;
+  width: 300px;
+  height: 260px;
   background: white;
 }
 
-h3 {
-  color: #6200ff;
+.logo {
+  background: -webkit-gradient(linear, right top, left bottom, from(#f58c29), to(#5a12df));
+  background: linear-gradient(to bottom left, #f58c29, #5a12df);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 3rem;
   position: fixed;
   top: 16px;
@@ -248,11 +248,14 @@ h3 {
   border: none;
   color: #f58c29;
   font-size: 2.4rem;
+  -webkit-transform: scaleY(1.5);
+          transform: scaleY(1.5);
 }
 
 .content .next {
   top: 100px;
   right: 0;
+  color: #5a12df;
 }
 
 .content .prev {
@@ -272,6 +275,13 @@ h3 {
 .content .showPrev {
   -webkit-animation: showPrev .5s forwards;
           animation: showPrev .5s forwards;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  font-size: 1rem;
 }
 
 @-webkit-keyframes showNext {
