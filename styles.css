@@ -26,7 +26,7 @@ nav button {
 nav button .topLine, nav button .middleLine, nav button .bottomLine {
   position: relative;
   display: block;
-  background: #6200ff;
+  background: #44a344;
   mix-blend-mode: hue;
   width: 40px;
   height: 5px;
@@ -48,7 +48,7 @@ nav ul {
           transform: translateX(-110%);
   -webkit-transform-origin: left;
           transform-origin: left;
-  background: #180429;
+  background: #184718;
   width: 200%;
   height: 99vh;
   list-style: none;
@@ -72,27 +72,26 @@ nav ul li a {
   text-decoration: none;
 }
 
-.reveal ul {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-  -webkit-box-shadow: 0px 2px 8px #180429;
-          box-shadow: 0px 2px 8px #180429;
-}
-
-.reveal .close .topLine {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  bottom: -5px;
-}
-
-.reveal .close .bottomLine {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  bottom: 5px;
-}
-
-.reveal .close .middleLine {
-  opacity: 0;
+@media (max-width: 786px) {
+  .reveal ul {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    -webkit-box-shadow: 0px 2px 8px #184718;
+            box-shadow: 0px 2px 8px #184718;
+  }
+  .reveal .close .topLine {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    bottom: -5px;
+  }
+  .reveal .close .bottomLine {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 5px;
+  }
+  .reveal .close .middleLine {
+    opacity: 0;
+  }
 }
 
 .overlay {
@@ -144,8 +143,8 @@ nav ul li a {
     height: 4px;
     width: 100%;
     border-radius: 10px;
-    background: -webkit-gradient(linear, left top, right top, from(#5a12df), to(#f58c29));
-    background: linear-gradient(to right, #5a12df, #f58c29);
+    background: -webkit-gradient(linear, left top, right top, from(#367736), to(#c7c56c));
+    background: linear-gradient(to right, #367736, #c7c56c);
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
     -webkit-transition: all .3s ease;
@@ -174,8 +173,11 @@ html {
   right: 0;
   width: 100%;
   height: 65%;
-  background: -webkit-gradient(linear, left top, right bottom, from(#5a12df), to(#f58c29));
-  background: linear-gradient(to bottom right, #5a12df, #f58c29);
+  background-image: url("Assets/pexels-johannes-plenio-1632790.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #367736;
+  background-blend-mode: hard-light;
 }
 
 .clip2 {
@@ -190,8 +192,8 @@ html {
 }
 
 .logo {
-  background: -webkit-gradient(linear, right top, left bottom, from(#f58c29), to(#5a12df));
-  background: linear-gradient(to bottom left, #f58c29, #5a12df);
+  background: -webkit-gradient(linear, right top, left bottom, from(#c7c56c), to(#367736));
+  background: linear-gradient(to bottom left, #c7c56c, #367736);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 3rem;
@@ -220,7 +222,6 @@ html {
   display: none;
   font-size: 1.4rem;
   color: #222;
-  mix-blend-mode: color-burn;
   position: relative;
 }
 
@@ -261,7 +262,7 @@ html {
   background: transparent;
   outline: none;
   border: none;
-  color: #f58c29;
+  color: #c7c56c;
   font-size: 2.4rem;
   -webkit-transform: scaleY(1.5);
           transform: scaleY(1.5);
@@ -270,7 +271,7 @@ html {
 .content .next {
   top: 100px;
   right: 0;
-  color: #5a12df;
+  color: #367736;
 }
 
 .content .prev {
@@ -358,7 +359,7 @@ html {
     right: 0;
     top: 0;
     height: 100%;
-    width: 55%;
+    width: 60%;
   }
   .clip2 {
     -webkit-clip-path: ellipse(67% 62% at 100% 50%);
