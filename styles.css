@@ -72,7 +72,7 @@ nav ul li a {
   text-decoration: none;
 }
 
-@media (max-width: 786px) {
+@media (max-width: 1024px) {
   .reveal ul {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
@@ -352,14 +352,14 @@ html {
   }
 }
 
-@media (min-width: 787px) {
+@media (min-width: 1024px) {
   .clip {
     -webkit-clip-path: ellipse(67% 100% at 100% 50%);
             clip-path: ellipse(67% 100% at 100% 50%);
     right: 0;
     top: 0;
     height: 100%;
-    width: 60%;
+    width: 70%;
   }
   .clip2 {
     -webkit-clip-path: ellipse(67% 62% at 100% 50%);
