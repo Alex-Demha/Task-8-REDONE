@@ -100,29 +100,43 @@ nav ul li a {
 }
 
 @media (min-width: 1024px) {
+  nav {
+    height: 80px;
+    z-index: 100;
+  }
   nav button {
     display: none;
   }
   nav ul {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     background: transparent;
     border: none;
-    width: 300px;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: 5px;
+    padding-left: 160px;
   }
   nav ul li {
     margin: 8px;
-    width: 120px;
   }
   nav ul li:hover {
     background: transparent;
   }
   nav ul li a {
+    font-size: 1.8rem;
     padding: 10px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     background: none;
+    color: black;
   }
   nav ul li a::after {
     content: '';
@@ -130,7 +144,8 @@ nav ul li a {
     height: 4px;
     width: 100%;
     border-radius: 10px;
-    background: #6200ff;
+    background: -webkit-gradient(linear, left top, right top, from(#5a12df), to(#f58c29));
+    background: linear-gradient(to right, #5a12df, #f58c29);
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
     -webkit-transition: all .3s ease;
@@ -167,8 +182,8 @@ html {
   -webkit-clip-path: ellipse(33% 24% at 11% 100%);
           clip-path: ellipse(33% 24% at 11% 100%);
   position: fixed;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   width: 300px;
   height: 260px;
   background: white;
@@ -333,6 +348,37 @@ html {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     opacity: 100;
+  }
+}
+
+@media (min-width: 787px) {
+  .clip {
+    -webkit-clip-path: ellipse(67% 100% at 100% 50%);
+            clip-path: ellipse(67% 100% at 100% 50%);
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 55%;
+  }
+  .clip2 {
+    -webkit-clip-path: ellipse(67% 62% at 100% 50%);
+            clip-path: ellipse(67% 62% at 100% 50%);
+    height: 100%;
+    width: 25%;
+    left: auto;
+    right: 0;
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  .content {
+    left: 40px;
+    top: 30%;
+  }
+  .logo {
+    left: 20px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 /*# sourceMappingURL=styles.css.map */

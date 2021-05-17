@@ -1,6 +1,18 @@
+var interval;
+var timer;
+timer = function()
+{interval = setInterval(function(){
+    $('.next').click();}
+    , 6000);
+}
+timer();
+
 $(".arrow").on('click', function(){
+    
     if($(this).hasClass('next'))
     {
+        clearInterval(interval);
+        timer();
         const $El = $(".active");
         const $activeMark = $(".markActive");
         if ($El.hasClass("text3")) {
@@ -19,8 +31,11 @@ $(".arrow").on('click', function(){
 });
 
 $(".arrow").on('click', function(){
+    
     if($(this).hasClass('prev'))
     {
+        clearInterval(interval);
+        timer();
         const $El = $(".active");
         const $activeMark = $(".markActive");
         if ($El.hasClass("text1")) {
@@ -38,9 +53,7 @@ $(".arrow").on('click', function(){
     }
 });
 
-setInterval(function(){
-    $('.next').click();}
-    , 7000);
+
 
 
 var $btn = $(".navButton");

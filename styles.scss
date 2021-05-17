@@ -24,11 +24,10 @@ html{
 }
 
 .clip2{
-    
     clip-path: ellipse(33% 24% at 11% 100%);
     position: fixed;
-    bottom:0;
-    left:0;
+    left: 0;
+    bottom: 0;
     width: 300px;
     height: 260px;
     background: white;
@@ -157,3 +156,32 @@ html{
     }
 }
 
+@media (min-width: 787px){
+    .clip{
+        clip-path: ellipse(67% 100% at 100% 50%);
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 55%;
+    }
+
+    .clip2{
+        clip-path: ellipse(67% 62% at 100% 50%);
+        height: 100%;
+        width: 25%;
+        left: auto;
+        right: 0;
+        transform: translateX(30%);
+
+    }
+
+    .content{
+        left: 40px;
+        top: 30%;
+    }
+
+    .logo{
+        left: 20px;
+        width: fit-content;
+    }
+}

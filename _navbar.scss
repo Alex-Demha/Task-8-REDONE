@@ -95,35 +95,44 @@ nav{
 
 @media (min-width: 1024px){
     nav{
+        height: 80px;
+        z-index: 100;
         button{
             display: none;
         }
 
         ul{
-            transform: translateX(0px);
+            transform: translateX(0);
             background: transparent;
             border: none;
-            width: 300px;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            padding-top: 5px;
+            padding-left: 160px;
 
            li{
+
                 margin: 8px;
-                width: 120px;
+              
 
                 &:hover{
                     background: transparent;
                 }
 
                a{
+                font-size: 1.8rem;
                 padding: 10px;
                 width: fit-content;
                 background: none ;
+                color: black;
                 &::after{
                         content: '';
                         display: block;
                         height: 4px;
                         width: 100%;
                         border-radius: 10px;
-                        background: $nav;
+                        background: linear-gradient(to right, $secondaryColor1, $secondaryColor2);
                         transform: scaleX(0);
                         transition: all .3s ease;
                     }
