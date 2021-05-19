@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=KoHo&display=swap");
 nav {
   -webkit-transition: z-index .5s;
   transition: z-index .5s;
@@ -15,7 +16,7 @@ nav .navButton {
   position: absolute;
   top: 6px;
   left: 10px;
-  z-index: 1000;
+  z-index: 100;
   width: 50px;
   height: 50px;
   background-color: transparent;
@@ -30,10 +31,9 @@ nav .navButton .topLine, nav .navButton .middleLine, nav .navButton .bottomLine 
   -webkit-text-fill-color: transparent;
   position: relative;
   display: block;
-  mix-blend-mode: hue;
   width: 40px;
   height: 5px;
-  border-radius: 12px;
+  border-radius: 50px;
   -webkit-transition: all cubic-bezier(0.2, 0.2, 0.3, 1.5) 0.4s 0.05s;
   transition: all cubic-bezier(0.2, 0.2, 0.3, 1.5) 0.4s 0.05s;
 }
@@ -113,7 +113,6 @@ nav ul li a {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     background: transparent;
-    border: none;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -127,20 +126,21 @@ nav ul li a {
   }
   nav ul li {
     margin: 8px;
-  }
-  nav ul li:hover {
-    background: transparent;
+    height: 40px;
   }
   nav ul li a {
     font-size: 1.8rem;
     padding: 10px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    background: none;
     color: black;
+    border-radius: 100px;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
   }
-  nav ul li a::after {
+  nav ul li a:hover {
+    background: -webkit-gradient(linear, right top, left bottom, from(#c7c56c), to(#367736));
+    background: linear-gradient(to bottom left, #c7c56c, #367736);
+  }
+  nav ul li .navActive::after {
     content: '';
     display: block;
     height: 4px;
@@ -148,25 +148,16 @@ nav ul li a {
     border-radius: 10px;
     background: -webkit-gradient(linear, left top, right top, from(#367736), to(#c7c56c));
     background: linear-gradient(to right, #367736, #c7c56c);
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
   }
-  nav ul li a:hover::after {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+  nav ul li .navActive:hover {
+    background: none;
   }
 }
 
 html {
   font-size: 62.5%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'KoHo', sans-serif;
   background-color: #eee;
-}
-
-.wrapper {
-  overflow: hidden;
 }
 
 .clip {
@@ -225,7 +216,6 @@ html {
   text-align: center;
   display: none;
   font-size: 1.4rem;
-  color: #222;
   position: relative;
 }
 
@@ -270,7 +260,6 @@ html {
   background: transparent;
   outline: none;
   border: none;
-  color: #c7c56c;
   font-size: 2.4rem;
   -webkit-transform: scaleY(1.5);
           transform: scaleY(1.5);
@@ -285,6 +274,7 @@ html {
 .content .prev {
   top: 100px;
   left: 0;
+  color: #c7c56c;
 }
 
 .content .active {

@@ -1,37 +1,46 @@
+//variables
 $navList: #184718;
 
+//NavBar----------------------------------------------------------------------------------------
 nav{
+// z-index that transitions when opened so that you can press button under it when its not opened.
     transition: z-index .5s;
     z-index: 0;
+
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
     width: 55%;
+// the nav button is the three lines (hamburger menu) 
     .navButton{
         position: absolute;
         top: 6px;
         left: 10px;
-        z-index: 1000;
+        z-index: 100;
         width: 50px;
         height: 50px;
         background-color: transparent;
+    // removing default border and outline
         border: none;
         outline: none;
-        
+
+    // styling the three lines 
         .topLine, .middleLine, .bottomLine{
+            // adding gradient color to the lines instead of their background
             background: linear-gradient(to left, $secondaryColor2, $secondaryColor1);
             -webkit-background-clip: content-box;
             -webkit-text-fill-color: transparent;
             position: relative;
             display: block;
-            mix-blend-mode: hue;
             width: 40px;
             height: 5px;
-            border-radius: 12px;
+            border-radius: 50px;
+            // used cubic-bezier to make the animation bouncy
             transition: all cubic-bezier(.2, .2, .3, 1.5) .4s .05s;
         }
 
+        // adding space between the three lines
         .topLine{
             bottom : 8px;
         }
@@ -40,7 +49,11 @@ nav{
             bottom: -8px;
         }
     }
+
+    // the items inside the nav bar -----------------------------------------------------
     ul{
+        // to make them appear from the left screen side I used translate X and moved them out of view
+        //and when the button is pressed, they come back to  their original location
         transform: translateX(-110%);
         transform-origin: left;
         background: $navList;
@@ -61,20 +74,23 @@ nav{
                 color: #eee;
                 text-decoration: none;
             }
-            
-            
         }
     }
 }
 
+
+//when the button is pressed ---------------------------------------------------
+// added a media max screen to fix an issue with box shadow
+// if you open the menu, then make the screen bigger the box shaow wouldnt diappear
+//so i made sure it only appears if the screen is small.
 @media (max-width: 1024px){
 .reveal{
-
     ul{
         transform: translateX(0px);
         box-shadow: 0px 2px 8px $navList;
     }
 
+// the animation that plays on the button to transform it into an X
     .close{
         .topLine{
             transform: rotate(45deg);
@@ -92,56 +108,67 @@ nav{
     }
 }
 }
+
+// makes the nav appear on top of everything
 .overlay{
     z-index: 100;
 }
 
 
+// on bigger screens-----------------------------------------------------------------------
 @media (min-width: 1024px){
     nav{
         height: 80px;
         z-index: 100;
+
+        //remove the button completely
         button{
             display: none;
         }
 
         ul{
+            //removing the translate X
             transform: translateX(0);
             background: transparent;
-            border: none;
             height: 100%;
+
+            // making the list items appear next to each other, instead of on top of one another.
             display: flex;
             flex-direction: row;
+
             padding-top: 5px;
             padding-left: 160px;
+
            li{
-
                 margin: 8px;
-              
-
-                &:hover{
-                    background: transparent;
-                }
+                height: 40px;
 
                a{
                 font-size: 1.8rem;
                 padding: 10px;
-                width: fit-content;
-                background: none ;
                 color: black;
-                &::after{
-                        content: '';
-                        display: block;
-                        height: 4px;
-                        width: 100%;
-                        border-radius: 10px;
-                        background: linear-gradient(to right, $secondaryColor1, $secondaryColor2);
-                        transform: scaleX(0);
-                        transition: all .3s ease;
+                border-radius: 100px;
+                transition: all .2s ease;
+
+                &:hover{
+                    background: linear-gradient(to bottom left, $secondaryColor2, $secondaryColor1);
                     }
-                
-                &:hover::after{
-                    transform: scaleX(1);
+                }
+
+                //Adding a line under the currently active page.
+               .navActive{
+                &::after{
+                    content: '';
+                    display: block;
+                    height: 4px;
+                    width: 100%;
+                    border-radius: 10px;
+                    background: linear-gradient(to right, $secondaryColor1, $secondaryColor2);
+                }
+
+                // removing the hover effect on the active page.
+                &:hover{
+                    background: none;
                 }
                }
            }
