@@ -1,13 +1,13 @@
 $secondaryColor1: #367736;
 $secondaryColor2: #c7c56c;
-$navList: #184718;
-$nav: #44a344;
+
 
 @import 'navbar';
 
 html{
     font-size: 62.5%;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #eee;
 }
 
 .wrapper{
@@ -35,7 +35,7 @@ html{
     bottom: 0;
     width: 300px;
     height: 260px;
-    background: white;
+    background: #eee;
 }
 
 .logo{
@@ -86,6 +86,7 @@ html{
 
         .marker{
             color: gray;
+            user-select: none;
         }
 
         .markActive{

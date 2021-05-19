@@ -11,35 +11,38 @@ nav {
   width: 55%;
 }
 
-nav button {
+nav .navButton {
   position: absolute;
   top: 6px;
   left: 10px;
   z-index: 1000;
   width: 50px;
   height: 50px;
-  background: transparent;
+  background-color: transparent;
   border: none;
   outline: none;
 }
 
-nav button .topLine, nav button .middleLine, nav button .bottomLine {
+nav .navButton .topLine, nav .navButton .middleLine, nav .navButton .bottomLine {
+  background: -webkit-gradient(linear, right top, left top, from(#c7c56c), to(#367736));
+  background: linear-gradient(to left, #c7c56c, #367736);
+  -webkit-background-clip: content-box;
+  -webkit-text-fill-color: transparent;
   position: relative;
   display: block;
-  background: #44a344;
   mix-blend-mode: hue;
   width: 40px;
   height: 5px;
   border-radius: 12px;
-  -webkit-transition: all cubic-bezier(0.2, 0.2, 0.3, 1.6) 0.4s 0.05s;
-  transition: all cubic-bezier(0.2, 0.2, 0.3, 1.6) 0.4s 0.05s;
+  -webkit-transition: all cubic-bezier(0.2, 0.2, 0.3, 1.5) 0.4s 0.05s;
+  transition: all cubic-bezier(0.2, 0.2, 0.3, 1.5) 0.4s 0.05s;
 }
 
-nav button .topLine {
+nav .navButton .topLine {
   bottom: 8px;
 }
 
-nav button .bottomLine {
+nav .navButton .bottomLine {
   bottom: -8px;
 }
 
@@ -159,6 +162,7 @@ nav ul li a {
 html {
   font-size: 62.5%;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #eee;
 }
 
 .wrapper {
@@ -188,7 +192,7 @@ html {
   bottom: 0;
   width: 300px;
   height: 260px;
-  background: white;
+  background: #eee;
 }
 
 .logo {
@@ -249,6 +253,10 @@ html {
 
 .content .markerBox .marker {
   color: gray;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .content .markerBox .markActive {

@@ -28,10 +28,7 @@ $(".arrow").on('click', function(){
             $activeMark.removeClass('markActive')
         }
     }
-});
 
-$(".arrow").on('click', function(){
-    
     if($(this).hasClass('prev'))
     {
         clearInterval(interval);
@@ -50,8 +47,12 @@ $(".arrow").on('click', function(){
             $El.removeClass('active').removeClass("showNext").removeClass("showPrev");
             $activeMark.removeClass('markActive');
         }
-    }
+    };
 });
+
+
+    
+    
 
 
 

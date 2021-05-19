@@ -1,3 +1,4 @@
+$navList: #184718;
 
 nav{
     transition: z-index .5s;
@@ -7,26 +8,28 @@ nav{
     left: 0;
     display: flex;
     width: 55%;
-    button{
+    .navButton{
         position: absolute;
         top: 6px;
         left: 10px;
         z-index: 1000;
         width: 50px;
         height: 50px;
-        background: transparent;
+        background-color: transparent;
         border: none;
         outline: none;
         
         .topLine, .middleLine, .bottomLine{
+            background: linear-gradient(to left, $secondaryColor2, $secondaryColor1);
+            -webkit-background-clip: content-box;
+            -webkit-text-fill-color: transparent;
             position: relative;
             display: block;
-            background: $nav;
             mix-blend-mode: hue;
             width: 40px;
             height: 5px;
             border-radius: 12px;
-            transition: all cubic-bezier(.2, .2, .3, 1.6) .4s .05s;
+            transition: all cubic-bezier(.2, .2, .3, 1.5) .4s .05s;
         }
 
         .topLine{
