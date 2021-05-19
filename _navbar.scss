@@ -148,8 +148,7 @@ nav{
                 padding: 10px;
                 color: black;
                 border-radius: 100px;
-                transition: all .2s ease;
-
+                
                 &:hover{
                     background: linear-gradient(to bottom left, $secondaryColor2, $secondaryColor1);
                     }
@@ -160,7 +159,7 @@ nav{
                 &::after{
                     content: '';
                     display: block;
-                    height: 4px;
+                    height: 3px;
                     width: 100%;
                     border-radius: 10px;
                     background: linear-gradient(to right, $secondaryColor1, $secondaryColor2);

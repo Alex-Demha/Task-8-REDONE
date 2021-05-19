@@ -24,6 +24,7 @@ html{
     height: 65%;
     background-image: url('Assets/pexels-johannes-plenio-1632790.jpg');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     // adding a green color to the original photo to make it fit the colors of the page.
     background-color: #367736;
@@ -187,20 +188,22 @@ html{
 
     //changing Clip, Clip2, Content, and Logo positions
     .clip{
-        clip-path: ellipse(67% 100% at 100% 50%);
+        clip-path: ellipse(98% 100% at 100% 18%);
         right: 0;
         top: 0;
         height: 100%;
-        width: 70%;
+        width: 44%;
+
     }
 
     .clip2{
-        clip-path: ellipse(67% 62% at 100% 50%);
+        clip-path: ellipse(35% 45% at 100% 0%);
         height: 100%;
-        width: 25%;
+        width: 40%;
         left: auto;
         right: 0;
-        transform: translateX(30%);
+        top:0;
+        transform: translateX(8%);
     }
 
     .content{
