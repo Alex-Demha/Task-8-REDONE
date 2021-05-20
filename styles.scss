@@ -49,7 +49,6 @@ html{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-
     font-size: 3rem;
     position: fixed;
     top: 16px;
@@ -60,7 +59,7 @@ html{
 .content{
     width: 50%;
     // max width to make reading easier on big screens.
-    max-width: 500px;
+    max-width: 450px;
     position: absolute;
     top: 100px;
     right: 20px;
@@ -183,6 +182,37 @@ html{
     }
 }
 
+@media(orientation: landscape){
+    .clip{
+        clip-path: ellipse(98% 100% at 100% 18%);
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 44%;
+    }
+
+    .clip2{
+        clip-path: ellipse(35% 45% at 100% 0%);
+        height: 100%;
+        width: 50%;
+        left: auto;
+        right: 0;
+        top:0;
+        transform: translateX(5%);
+    }
+
+    .content{
+        left: 20px;
+        top: 15%;
+        width: 40%;
+    }
+
+    .logo{
+        font-size: 2.8rem;
+        right: 10px;
+        width: fit-content;
+    }
+}
 // on bigger screens -------------------------------------------------------------------------
 @media (min-width: 1024px){
 
@@ -207,11 +237,13 @@ html{
     }
 
     .content{
-        left: 40px;
+        left: 50px;
         top: 30%;
+        width: 50%;
     }
 
     .logo{
+        font-size: 3rem;
         left: 20px;
         width: fit-content;
     }
