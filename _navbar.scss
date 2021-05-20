@@ -115,6 +115,16 @@ nav{
 }
 
 
+//on landscape (width > height), helps when using phones horizontally.
+@media(orientation: landscape){
+      nav{
+          ul{
+              padding-top: 40px;
+      }
+    }
+}
+
+
 // on bigger screens-----------------------------------------------------------------------
 @media (min-width: 1024px){
     nav{
@@ -146,16 +156,18 @@ nav{
                a{
                 font-size: 1.8rem;
                 padding: 10px;
-                color: black;
+                color: #444;
                 border-radius: 100px;
                 
                 &:hover{
-                    background: linear-gradient(to bottom left, $secondaryColor2, $secondaryColor1);
+                    color: #000;
                     }
                 }
 
                 //Adding a line under the currently active page.
                .navActive{
+                   font-weight: bold;
+                   color: #000;
                 &::after{
                     content: '';
                     display: block;
@@ -165,10 +177,7 @@ nav{
                     background: linear-gradient(to right, $secondaryColor1, $secondaryColor2);
                 }
 
-                // removing the hover effect on the active page.
-                &:hover{
-                    background: none;
-                }
+                
                }
            }
         }

@@ -1,4 +1,4 @@
-//variables
+// declaring variables
 $secondaryColor1: #367736;
 $secondaryColor2: #c7c56c;
 
@@ -8,13 +8,19 @@ $secondaryColor2: #c7c56c;
 //adding google font
 @import url('https://fonts.googleapis.com/css2?family=KoHo&display=swap');
 
+//root font-size (1rem = 10px) and background color
 html{
     font-size: 62.5%;
     font-family: 'KoHo', sans-serif;
     background-color: #eee;
 }
 
-// the circular-bow tree picture 
+//making the cursor change when on a button.
+button{
+    cursor: pointer;
+}
+
+// the circular tree picture 
 .clip{
     clip-path: ellipse(100% 74% at 16% 100%);
     position: fixed;
@@ -26,10 +32,10 @@ html{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     // adding a green color to the original photo to make it fit the colors of the page.
     background-color: #367736;
     background-blend-mode: hard-light;
-   
 }
 
 // a smaller circle that acts as the normal background to give a bow-like shape to the photo
@@ -51,7 +57,7 @@ html{
 
     font-size: 3rem;
     position: fixed;
-    top: 16px;
+    top: 10px;
     right: 14px;
     margin:0;
 }
@@ -182,6 +188,7 @@ html{
     }
 }
 
+//on landscape (width > height), helps when using phones horizontally -----------------------------------
 @media(orientation: landscape){
     .clip{
         clip-path: ellipse(98% 100% at 100% 18%);
@@ -209,7 +216,7 @@ html{
 
     .logo{
         font-size: 2.8rem;
-        right: 10px;
+        right: 4px;
         width: fit-content;
     }
 }
@@ -243,8 +250,20 @@ html{
     }
 
     .logo{
-        font-size: 3rem;
+        font-size: 3.2rem;
         left: 20px;
         width: fit-content;
     }
+}
+
+// for really narrow screens (z-fold & older phones) ----------------------------------------------------------------
+@media(max-width: 320px){
+    .content{
+        width: 70%;
+        right: 2px;
+    
+        .marker{
+            display: none;
+        }      
+}
 }

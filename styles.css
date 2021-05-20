@@ -101,6 +101,12 @@ nav ul li a {
   z-index: 100;
 }
 
+@media (orientation: landscape) {
+  nav ul {
+    padding-top: 40px;
+  }
+}
+
 @media (min-width: 1024px) {
   nav {
     height: 80px;
@@ -131,12 +137,15 @@ nav ul li a {
   nav ul li a {
     font-size: 1.8rem;
     padding: 10px;
-    color: black;
+    color: #444;
     border-radius: 100px;
   }
   nav ul li a:hover {
-    background: -webkit-gradient(linear, right top, left bottom, from(#c7c56c), to(#367736));
-    background: linear-gradient(to bottom left, #c7c56c, #367736);
+    color: #000;
+  }
+  nav ul li .navActive {
+    font-weight: bold;
+    color: #000;
   }
   nav ul li .navActive::after {
     content: '';
@@ -147,15 +156,16 @@ nav ul li a {
     background: -webkit-gradient(linear, left top, right top, from(#367736), to(#c7c56c));
     background: linear-gradient(to right, #367736, #c7c56c);
   }
-  nav ul li .navActive:hover {
-    background: none;
-  }
 }
 
 html {
   font-size: 62.5%;
   font-family: 'KoHo', sans-serif;
   background-color: #eee;
+}
+
+button {
+  cursor: pointer;
 }
 
 .clip {
@@ -192,7 +202,7 @@ html {
   -webkit-text-fill-color: transparent;
   font-size: 3rem;
   position: fixed;
-  top: 16px;
+  top: 10px;
   right: 14px;
   margin: 0;
 }
@@ -376,7 +386,7 @@ html {
   }
   .logo {
     font-size: 2.8rem;
-    right: 10px;
+    right: 4px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -409,11 +419,21 @@ html {
     width: 50%;
   }
   .logo {
-    font-size: 3rem;
+    font-size: 3.2rem;
     left: 20px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+  }
+}
+
+@media (max-width: 320px) {
+  .content {
+    width: 70%;
+    right: 2px;
+  }
+  .content .marker {
+    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */

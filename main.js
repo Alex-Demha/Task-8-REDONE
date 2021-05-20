@@ -1,10 +1,10 @@
-// making a timed function that scrolls through the sliders every 6 seconds automatically (auto scroll)
+// making a timed function that scrolls through the sliders every 8 seconds automatically (auto scroll)
 var interval;
 var timer;
 timer = function()
 {interval = setInterval(function(){
     $('.next').click();}
-    , 6000);
+    , 8000);
 }
 timer();
 
@@ -61,6 +61,8 @@ $(".arrow").on('click', function(){
         }
     };
 });
+
+
 
 
     
