@@ -5,37 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Linking CSS (made with a sass compiler) -->
     <link rel="stylesheet" href="styles.css">
-    <title>Enviromental Modern Design</title>
+
+    <title>Modern Design (Environment)</title>
 </head>
 <body>
 
-    <!-- two clips that make a bow shape with a pic inside -->
+    <!-- two clips that make a bow shape with an image inside -->
     <div class="clip"></div>
     <div class="clip2"></div>
 
-
+<!-- The navigation bar -->
     <nav>
+        <!-- Logo -->
         <h3 class="logo">LOGO</h3>
+
+        <!-- Nav bar items -->
         <ul>
             <li><a href="" class="navActive">Home</a></li>
             <li><a href="">News</a></li>
             <li><a href="">Contact</a></li>
             <li><a href="">Other</a></li>
         </ul>
-        <button class="navButton"><span class="topLine"></span>
+
+        <!-- Nav bar hamburger menu button -->
+        <button class="navButton">
+                <span class="topLine"></span>
                 <span class="middleLine"></span>
                 <span class="bottomLine"></span>
         </button>
   </nav>
 
-
+<!-- Page content  -->
     <div class="content">
 
+        <!-- Arrow for going to the previous slide -->
         <button class="arrow prev"> &#60; </button>
+
+        <!-- The slides (a list with each 'li' representing a slide) -->
         <ul>
         <li class="slide text1 active showNext">
-            <h4 class="title">Enviroment</h4>
+            <h4 class="title">Environment</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates perferendis a non aperiam, qui earum asperiores dolore quia?
             </p>
             
@@ -54,20 +65,27 @@
             fugit vitae vel!</p>
         </li>
     </ul>
+
+    <!-- markers (small horizontal lines beneath the list) -->
     <div class="markerBox">
         <span class="marker mark1 markActive">-</span>
         <span class="marker mark2">-</span>
         <span class="marker mark3">-</span>
     </div>
-    
 
+        <!-- Arrow for going to the next slide -->
         <button class="arrow next"> &#62; </button>
     </div>
     
+    <!-- A copyright at the end of the page -->
     <p class="copyright">
         copyright &copy;
     </p>
+
+    <!-- Jquery Link -->
     <script src="JQuery/jquery-3.5.1.js"></script>
+
+    <!-- My script (JS) -->
     <script src="main.js"></script>
 </body>
 </html>

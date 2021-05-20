@@ -196,15 +196,15 @@ button {
 }
 
 .logo {
-  background: -webkit-gradient(linear, right top, left bottom, from(#c7c56c), to(#367736));
-  background: linear-gradient(to bottom left, #c7c56c, #367736);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-size: 3rem;
   position: fixed;
   top: 10px;
   right: 14px;
   margin: 0;
+  background: -webkit-gradient(linear, right top, left bottom, from(#c7c56c), to(#367736));
+  background: linear-gradient(to bottom left, #c7c56c, #367736);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .content {

@@ -80,9 +80,9 @@ nav{
 
 
 //when the button is pressed ---------------------------------------------------
-// added a media max screen to fix an issue with box shadow
-// if you open the menu, then make the screen bigger the box shaow wouldnt diappear
-//so i made sure it only appears if the screen is small.
+// added this "@media" to fix an issue with box shadow
+// if you open the menu, then make the screen bigger the menu would disappear but the box shadow wouldn't.
+//so i made sure the box shadow only appear if the screen is small.
 @media (max-width: 1024px){
 .reveal{
     ul{
@@ -114,7 +114,6 @@ nav{
     z-index: 100;
 }
 
-
 //on landscape (width > height), helps when using phones horizontally.
 @media(orientation: landscape){
       nav{
@@ -123,7 +122,6 @@ nav{
       }
     }
 }
-
 
 // on bigger screens-----------------------------------------------------------------------
 @media (min-width: 1024px){
@@ -176,8 +174,6 @@ nav{
                     border-radius: 10px;
                     background: linear-gradient(to right, $secondaryColor1, $secondaryColor2);
                 }
-
-                
                }
            }
         }
